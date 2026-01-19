@@ -21,7 +21,7 @@ This is a solution to the [Huddle landing page with single introductory section 
 
 ### Built with
 
-- Semantic HTML5 markup
+- Semantic НTML5 markup
 - CSS custom properties
 - Flexbox
 - CSS Grid
