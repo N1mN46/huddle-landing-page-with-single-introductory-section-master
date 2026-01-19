@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --purple-700: hsl(257, 40%, 49%);
+    --magenta-400: hsl(300, 69%, 71%);
+    --white: hsl(0, 0%, 100%);
+    --shadow: hsla(0, 0%, 0%, .4);
+    
+    --font-poppins: "Poppins", sans-serif;
+    --font-open-sans: "Open Sans", sans-serif;
+
+    --bg-mobile: url(images/bg-mobile.svg);
+    --bg-desktop: url(images/bg-desktop.svg);
+
+    --round-button: 1.5rem;
+}
+
+body {
+    background: var(--bg-mobile)  0 0 / 100% no-repeat var(--purple-700);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 2.3rem;
+    padding-block-end: 0;
+    gap: clamp(3.2rem, 5vh, 5.2rem);
+}
+
+.page-header__logo {
+    width: clamp(3rem, 33vw, 15rem);
+}
+
+.register-card {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 1rem;
+}
+
+.register-card__image {
+    width: clamp(3rem, 100%, 70rem);
+}
+
+.register-card__content {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    text-align: center;
+    color: var(--white);
+
+}
+
+.register-card__title {
+    font-family: var(--font-poppins);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-block-end: 0;
+}
+
+.register-card__description {
+    font-family: var(--font-open-sans);
+    font-size:  .9rem;
+    font-weight: 300;
+    margin-block-end: 1.2rem;
+}
+
+.btn {
+    width: clamp(1rem, 70%, 15rem);
+    block-size: 2.5rem;
+    border-radius: var(--round-button);
+    border: none;
+}
+
+.register-card__reg-btn {
+    font-family: var(--font-poppins);
+    font-size: .7rem;
+    color: var(--purple-700);
+    box-shadow: .1rem .1rem 0.8rem var(--shadow);
+    transform: translateY(0);
+    transition: all 0.1s ease;
+}
+
+.register-card__footer {
+    width: 100%;
+}
+
+.register-card__socials-list {
+  list-style-type: none;
+  display: flex;
+  place-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.register-card__item {
+    padding-inline: .5rem;
+    width: clamp(.5rem, 5%, 2rem);
+}
+
+.register-card__item:hover .register-card__icon {
+    fill: var(--magenta-400);
+}
+
+.register-card__reg-btn:hover {
+    background-color: var(--magenta-400);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.register-card__reg-btn:active {
+  color: var(--white);
+  cursor: pointer;
+  transform: translateY(4px);
+  box-shadow: 0 0 0 var(--white), 0 0px 0px var(--shadow);
+}
+
+.register-card__reg-btn:disabled {
+    color: var(--white);
+}
+
+@media (width > 64rem) {
+
+    body {
+        background: var(--bg-desktop) 0% 0% / 150% no-repeat var(--purple-700);
+    }
+
+    .register-card {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .register-card__media {
+        flex: 1 1 45%;
+    }
+
+    .register-card__content {
+        flex: 1 1 45%;
+        place-items: start;
+        align-items: flex-start;
+        text-align: start;
+    }
+
+    .register-card__title {
+        font-size: 3rem;
+    }
+
+    .register-card__description {
+        font-size: 1.3rem;
+    }
+
+    .register-card__reg-btn {
+        block-size: 3rem;
+        width: 10rem;
+        font-size: .9rem;
+    }
+
+    .register-card__socials-list {
+        place-content: end;
+    }
+
+
+}
