@@ -26,6 +26,11 @@ This is a solution to the [Huddle landing page with single introductory section 
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- BEM methodology
+
+### What I learned
+
+Gained a better understanding of BEM, learned how to classify elements and modifiers, and used mixed classes for buttons.
 
 ## Author
 
